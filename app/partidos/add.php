@@ -34,19 +34,23 @@ if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
 <div class="container">
   <form class="ms-1 border border-rounded" action="./operations/add.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
-      <div class="fw-bold">Añadir partido</div>
+      <div class="fw-bold">Agregar partido</div>
       <div class="ms-1">
         <div class="mb-3">
-          <label for="txtPartido" class="form-label">Nombre</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">.</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="Partido">
-            <span class="input-group-text">.</span>
-          </div>
+          <label for="txtPartido" class="form-label">Id</label>
+          <input type="number" class="form-control" name="Id">
+        </div>
+        <div class="mb-3">
+          <label for="txtNombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="Nombre">
         </div>
         <div class="md-3">
           <label for="txtDescripcion" class="form-label">Descripcion</label>
           <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"></textarea>
+        </div>
+        <div>
+          <label for="txtLogo" class="form-label">Logo</label>
+          <input type="text" class="form-control" name="Logo">
         </div>
       </div>
     </div>
