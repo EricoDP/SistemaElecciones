@@ -32,7 +32,7 @@ if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
 <?php topContent() ?>
 
 <div class="container">
-  <form class="ms-1 border border-rounded" action="./operations/add.php" method="POST" enctype="multipart/form-data">
+  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
       <div class="fw-bold">Agregar partido</div>
       <div class="ms-1">
@@ -55,7 +55,7 @@ if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
       </div>
     </div>
     <div class="modal-footer">
-      <a href="./index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
+      <a href="../index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
       <button type="submit" class="btn btn-primary">Agregar</button>
     </div>
   </form>

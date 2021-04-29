@@ -43,17 +43,17 @@ $partidos = $service->GetList();
               <li class="list-group-item">Pertenece a <?= $partido->Partido_pertenece ?></li>
               <li class="list-group-item">Aspira a <?= $partido->Partido_pertenece ?></li>
               <li class="list-group-item">
-                <?php if ($estudiante->Status == 'Activo') : ?>
-                  <span class="text-success fw-bold"><?= $estudiante->Status ?></span>
+                <?php if ($partido->Status == 'Activo') : ?>
+                  <span class="text-success fw-bold"><?= $partido->Status ?></span>
                 <?php else : ?>
-                  <span class="text-danger fw-bold"><?= $estudiante->Status ?></span>
+                  <span class="text-danger fw-bold"><?= $partido->Status ?></span>
                 <?php endif; ?>
               </li>
             </ul>
             <div class="card-body">
               <div class="btn-group">
-                <a href="./operations/edit.php?id=<?= $estudiante->ID ?>" type="button" class="btn btn-success">Editar</a>
-                <button onclick="deleteItem('./delete.php?id=<?= $estudiante->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
+                <a href="./partidos/edit.php?id=<?= $partido->ID ?>" type="button" class="btn btn-success">Editar</a>
+                <button onclick="deleteItem('./delete.php?id=<?= $partido->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
               </div>
             </div>
           </div>
