@@ -11,13 +11,13 @@ require_once '../../services/partidosService.php';
 require_once '../../services/utilities.php';
 require_once '../../models/partidos.php';
 
-  $service = new partidosService("../");
+  $service = new ServiceFile("partidos");
 
   if(isset($_GET["id"])){
     $service->Delete($_GET["id"]);
   }
 
-  header("Location: ../index.php");
+  header("Location: ./index.php");
   exit();
 
 ?>
