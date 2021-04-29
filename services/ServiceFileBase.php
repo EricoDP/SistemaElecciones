@@ -8,7 +8,7 @@
 
     public function __construct($ruta, $filename){
       $this->directory = "{$ruta}data";
-      $this->jsonHandler = new JsonFileHandler($this->directory,$this->filename);
+      $this->jsonHandler = new JsonFileHandler($this->directory,$filename);
       $this->Utilities = new Utilities();
     }
 

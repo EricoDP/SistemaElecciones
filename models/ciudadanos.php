@@ -1,14 +1,18 @@
 <?php
-    class Puesto{
-        public $ID;
-        public $Nombre;
-        public $Descripcion;
-        public $Estado;
+  class Ciudadanos
+  {
+    public $DocIdentidad;
+    public $Nombre;
+    public $Apellido;
+    public $Email;
+    public $Estado;
 
-        public function __construct($nombre,$estado,$descripcion){
-            $this->Nombre = $nombre;
-            $this->Descripcion = $descripcion;
-            $this->Estado = $estado;
-        }
+    public function __construct($nombre, $estado, $apellido, $email,)
+    {
+      $this->Nombre = $nombre;
+      $this->Apellido = $apellido;
+      $this->Estado = $estado;
+      $this->Email = $email;
     }
+  }
 ?>
