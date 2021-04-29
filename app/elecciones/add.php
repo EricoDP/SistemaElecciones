@@ -8,15 +8,15 @@
   
   require_once '../../services/iServiceFile.php';
   require_once '../../services/ServiceFileBase.php';
-  require_once '../../services/puestoService.php';
+  require_once '../../services/eleccionesService.php';
   require_once '../../services/utilities.php';
-  require_once '../../models/puesto.php';
+  require_once '../../models/elecciones.php';
 
-  $service = new puestoService("../");
+  $service = new ciudadanosService();
 
-  if(isset($_POST["Monto"]) && isset($_POST["Descripcion"]))
+  if(isset($_POST["Nombre"]) &&  isset($_POST["Estado"]))
   {
-    if($_POST["Monto"] != "" && isset($_POST["Descripcion"]) != null)
+    if($_POST["Nombre"] != null && isset($_POST["Estado"]) != null)
     {
       date_default_timezone_set("America/Santo_Domingo");
       $fecha = date('d-m-y h:iA', time());
@@ -37,19 +37,19 @@
 <div class="container">
   <form class="ms-1 border border-rounded" action="./operations/add.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
-      <div class="fw-bold">Formulario de transaccion</div>
+      <div class="fw-bold">Agregar eleccion</div>
       <div class="ms-1">
         <div class="mb-3">
-          <label for="txtMonto" class="form-label">Monto</label>
+          <label for="txtNombre" class="form-label">Nombre</label>
           <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="Monto">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" name="Nombre">
           </div>
         </div>
         <div class="md-3">
-          <label for="txtDescripcion" class="form-label">Descripcion</label>
-          <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"></textarea>
+          <label for="txtEstado" class="form-label">Estado</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Estado">
+          </div>
         </div>
       </div>
     </div>
