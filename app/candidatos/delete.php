@@ -11,7 +11,7 @@ require_once '../../services/candidatosService.php';
 require_once '../../services/utilities.php';
 require_once '../../models/candidatos.php';
 
-  $service = new candidatosService("../");
+  $service = new candidatosService();
 
   if(isset($_GET["id"])){
     $service->Delete($_GET["id"]);
