@@ -14,8 +14,8 @@
   require_once '../../models/candidatos.php';
 
   $utilities = new Utilities();
-  $service = new candidatosService();
-  $partidoService = new partidosService();
+  $service = new ServiceFile("candidatos");
+  $partidoService = new ServiceFile("partidos");
 
   $transaccion = null;
 

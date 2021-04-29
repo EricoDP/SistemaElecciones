@@ -13,8 +13,8 @@
   require_once '../../services/utilities.php';
   require_once '../../models/candidatos.php';
 
-  $service = new candidatosService();
-  $partidoService = new partidosService();
+  $service = new ServiceFile("candidatos");
+  $partidoService = new ServiceFile("partidos");
 
   $partidos = $partidoService->GetList();
 

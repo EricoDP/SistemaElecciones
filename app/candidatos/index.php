@@ -12,7 +12,7 @@ require_once '../../services/candidatosService.php';
 require_once '../../services/utilities.php';
 require_once '../../models/candidatos.php';
 
-$service = new candidatosService();
+$service = new ServiceFile("candidatos");
 $utilities = new Utilities();
 
 $candidatos = $service->GetList();
