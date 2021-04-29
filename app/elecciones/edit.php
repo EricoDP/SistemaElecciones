@@ -15,25 +15,25 @@
   $utilities = new Utilities();
   $service = new ServiceFile("elecciones");
 
-  $transaccion = null;
-  if(isset($_GET["id"])){
-    $transaccion = $service->GetByID($_GET["id"]);
-  }
+  if(isset($_POST["Nombre"]))
+  {
+    if(($_POST["Nombre"] != null))
+    {
+      $eleccion = new eleccion(
+        $_POST["Nombre"],
+        True
+      );
 
-  if(isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Estado"]) && isset($_POST["Fecha"])){
-
-    $transaccion = new Transaccion(
-      $_POST["Fecha"],
-      $_POST["Nombre"],
-      $_POST["Estado"]
-    );
-
-    $transaccion->ID = $_POST["ID"];
-    $service->Edit($transaccion);
-    header("Location: ../index.php");
+      $service->Add($eleccion);
+    }
+    else{
+      echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
+    }
+    header("Location: ./index.php");
   }
 
 ?>
+
 
 <?php topContent()?>
 
@@ -48,11 +48,6 @@
             <input type="text" class="form-control" name="Nombre">
           </div>
         </div>
-        <div class="md-3">
-          <label for="txtEstado" class="form-label">Estado</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" name="Estado">
-          </div>
         </div>
       </div>
     </div>
