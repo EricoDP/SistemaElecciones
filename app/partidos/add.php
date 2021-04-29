@@ -24,7 +24,12 @@
       <div class="fw-bold">Añadir partido</div>
       <div class="ms-1">
         <div class="mb-3">
-          <label for="txtMonto" class="form-label">Partido</label>
+          <label for="txtPartido" class="form-label">Partido</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">.</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="Partido">
+            <span class="input-group-text">.</span>
+          </div>
         </div>
         <div class="md-3">
           <label for="txtDescripcion" class="form-label">Descripcion</label>
