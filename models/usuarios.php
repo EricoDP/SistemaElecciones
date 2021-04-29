@@ -1,5 +1,5 @@
 <?php
-  class Usuarios
+  class Usuario
   {
     public $ID;
     public $Nombre;

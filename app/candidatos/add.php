@@ -18,15 +18,20 @@
 
   $partidos = $partidoService->GetList();
 
-  if(isset($_POST["Monto"]) && isset($_POST["Descripcion"]))
+  if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]))
   {
-    if($_POST["Monto"] != "" && isset($_POST["Descripcion"]) != null)
+    if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null))
     {
-      date_default_timezone_set("America/Santo_Domingo");
-      $fecha = date('d-m-y h:iA', time());
+      $candidato = new Candidato(
+        $_POST["Nombre"],
+        $_POST["Apellido"],
+        $_POST["Partido_perteneceID"],
+        $_POST["Partido_aspiraID"],
+        $_FILES["Foto"],
+        True
+      );
 
-
-      $service->Add($transaccion);
+      $service->Add($candidato);
     }
     else{
       echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
@@ -57,7 +62,9 @@
             <option selected>Seleccione una opcion</option>
 
             <?php foreach($partidos as $key => $partido):?>
-              <option value="<?= $partido->ID?>"><?= $partido->Nombre;?></option>
+              <?php if($partido->Estado == true): ?>
+                <option value="<?= $partido->ID?>"><?= $partido->Nombre;?></option>
+              <?php endif; ?>
             <?php endforeach;?>
 
           </select>
@@ -68,7 +75,9 @@
             <option selected>Seleccione una opcion</option>
 
             <?php foreach($partidos as $key => $partido):?>
-              <option value="<?= $partido->ID?>"><?= $partido->Nombre;?></option>
+              <?php if($partido->Estado == true): ?>
+                <option value="<?= $partido->ID?>"><?= $partido->Nombre;?></option>
+              <?php endif; ?>
             <?php endforeach;?>
 
           </select>

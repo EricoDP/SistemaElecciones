@@ -1,5 +1,5 @@
 <?php
-  class Ciudadanos
+  class Ciudadano
   {
     public $DocIdentidad;
     public $Nombre;
