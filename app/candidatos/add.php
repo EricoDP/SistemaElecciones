@@ -12,7 +12,7 @@
   require_once '../../services/utilities.php';
   require_once '../../models/candidatos.php';
 
-  $service = new candidatosService("../");
+  $service = new candidatosService();
 
   if(isset($_POST["Monto"]) && isset($_POST["Descripcion"]))
   {
