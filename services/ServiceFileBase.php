@@ -43,8 +43,6 @@
       $log = new Logger("Insertar",$item);
       $log->writeAddLog();
       $this->jsonHandler->SaveFile($collection);
-      $this->txtHandler->SaveFile($collection);
-      $this->csvHandler->SaveFile($collection);
     }
 
     public function Edit($item){
