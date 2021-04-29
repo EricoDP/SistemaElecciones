@@ -1,0 +1,11 @@
+{
+  "candidatos": {
+    "id": "",
+    "nombre": "",
+    "apellido": "",
+    "partido": "",
+    "puesto": "",
+    "foto": "",
+    "estado": false
+  }
+}
