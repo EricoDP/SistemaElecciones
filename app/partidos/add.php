@@ -32,13 +32,13 @@ if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
 <?php topContent() ?>
 
 <div class="container">
-  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
+  <form class="ms-1 border border-rounded" action="./index.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
       <div class="fw-bold">Agregar partido</div>
       <div class="ms-1">
         <div class="mb-3">
-          <label for="txtPartido" class="form-label">Id</label>
-          <input type="number" class="form-control" name="Id">
+          <label for="txtID" class="form-label">ID</label>
+          <input type="number" class="form-control" name="ID">
         </div>
         <div class="mb-3">
           <label for="txtNombre" class="form-label">Nombre</label>
