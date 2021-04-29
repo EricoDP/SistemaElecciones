@@ -15,24 +15,24 @@
   $utilities = new Utilities();
   $service = new ServiceFile("ciudadanos");
 
-  $transaccion = null;
-  if(isset($_GET["Doc"])){
-    $transaccion = $service->GetByID($_GET["Doc"]);
-  }
+  if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Documento"]) && isset($_POST["Email"]))
+  {
+    if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Documento"] != null) && ($_POST["Email"] != null))
+    {
+      $ciudadano = new ciudadano(
+        $_POST["Nombre"],
+        $_POST["Apellido"],
+        $_POST["Documento"],
+        $_POST["Email"],
+        True
+      );
 
-  if(isset($_POST["Documento"]) && isset($_POST["Nombre"]) && isset($_POST["Apellido"])&& isset($_POST["Email"])&& isset($_POST["Estado"]) && isset($_POST["Fecha"])){
-
-    $transaccion = new Transaccion(
-      $_POST["Fecha"],
-      $_POST["Nombre"],
-      $_POST["Apellido"],
-      $_POST["Email"],
-      $_POST["Estado"]
-    );
-
-    $transaccion->ID = $_POST["ID"];
-    $service->Edit($transaccion);
-    header("Location: ../index.php");
+      $service->Add($ciudadano);
+    }
+    else{
+      echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
+    }
+    header("Location: ./index.php");
   }
 
 ?>
@@ -66,12 +66,6 @@
           <label for="txtEmail" class="form-label">Email</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="Email">
-          </div>
-        </div>
-        <div class="md-3">
-          <label for="txtEstado" class="form-label">Estado</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" name="Estado">
           </div>
         </div>
       </div>

@@ -14,20 +14,21 @@
 
   $service = new ServiceFile("elecciones");
 
-  if(isset($_POST["Nombre"]) &&  isset($_POST["Estado"]))
+  if(isset($_POST["Nombre"]))
   {
-    if($_POST["Nombre"] != null && isset($_POST["Estado"]) != null)
+    if(($_POST["Nombre"] != null))
     {
-      date_default_timezone_set("America/Santo_Domingo");
-      $fecha = date('d-m-y h:iA', time());
+      $eleccion = new eleccion(
+        $_POST["Nombre"],
+        True
+      );
 
-
-      $service->Add($transaccion);
+      $service->Add($eleccion);
     }
     else{
       echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
     }
-    header("Location: ../index.php");
+    header("Location: ./index.php");
   }
 
 ?>
@@ -45,11 +46,6 @@
             <input type="text" class="form-control" name="Nombre">
           </div>
         </div>
-        <div class="md-3">
-          <label for="txtEstado" class="form-label">Estado</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" name="Estado">
-          </div>
         </div>
       </div>
     </div>
