@@ -14,13 +14,16 @@ require_once '../../models/puesto.php';
 
 $service = new ServiceFile("puesto");
 
-if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
-  if ($_POST["Monto"] != "" && isset($_POST["Descripcion"]) != null) {
-    date_default_timezone_set("America/Santo_Domingo");
-    $fecha = date('d-m-y h:iA', time());
+if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"])) {
+  if ($_POST["Nombre"] != "" && isset($_POST["Descripcion"]) != null) {
 
+    $puesto = new Puesto(
+      $_POST["Nombre"],
+      $_POST["Descripcion"],
+      True
+    );
 
-    $service->Add($transaccion);
+    $service->Add($puesto);
   } else {
     echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
   }
