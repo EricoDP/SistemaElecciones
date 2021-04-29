@@ -7,11 +7,11 @@ require_once '../../handlers/Logger.php';
 
 require_once '../../services/iServiceFile.php';
 require_once '../../services/ServiceFileBase.php';
-require_once '../../services/candidatosService.php';
+require_once '../../services/partidosService.php';
 require_once '../../services/utilities.php';
-require_once '../../models/candidatos.php';
+require_once '../../models/partidos.php';
 
-  $service = new candidatosService("../");
+  $service = new partidosService("../");
 
   if(isset($_GET["id"])){
     $service->Delete($_GET["id"]);

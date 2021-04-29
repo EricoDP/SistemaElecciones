@@ -8,11 +8,11 @@
   
   require_once '../../services/iServiceFile.php';
   require_once '../../services/ServiceFileBase.php';
-  require_once '../../services/candidatosService.php';
+  require_once '../../services/puestoService.php';
   require_once '../../services/utilities.php';
-  require_once '../../models/candidatos.php';
+  require_once '../../models/puesto.php';
 
-  $service = new candidatosService("../");
+  $service = new puestoService("../");
 
   if(isset($_POST["Monto"]) && isset($_POST["Descripcion"]))
   {
