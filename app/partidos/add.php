@@ -32,6 +32,8 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
       True
     );
 
+    move_uploaded_file($imgname, $imgdestination);
+
     $service->Add($partido);
 
   } else {

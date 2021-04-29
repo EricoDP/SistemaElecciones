@@ -22,14 +22,24 @@
   {
     if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null))
     {
+      $target_dir = "../../assets/img/";
+      if(!is_dir($target_dir)){
+        mkdir($target_dir, 0755);
+      }
+
+      $imgname = $_FILES["Foto"]["tmp_name"];
+      $imgdestination = $target_dir . $_FILES["Foto"]["name"];
+
       $candidato = new Candidato(
         $_POST["Nombre"],
         $_POST["Apellido"],
         $_POST["Partido_perteneceID"],
         $_POST["Partido_aspiraID"],
-        $_FILES["Foto"],
+      "img/" . $_FILES["Foto"]["name"],
         True
       );
+
+      move_uploaded_file($imgname, $imgdestination);
 
       $service->Add($candidato);
     }
@@ -44,7 +54,7 @@
 <?php topContent()?>
 
 <div class="container">
-  <form class="ms-1 border border-rounded" action="./operations/add.php" method="POST" enctype="multipart/form-data">
+  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
       <div class="fw-bold">Agregar candidato</div>
       <div class="ms-1">
