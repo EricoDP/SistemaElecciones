@@ -57,7 +57,7 @@ if (isset($_POST["ID"]) && isset($_POST["Monto"]) && isset($_POST["Descripcion"]
   <!--Edit Content Begin-->
 
   <?php if ($partido == null) : ?>
-    <h3 class="w-100 text-center">No hay registro de esa transacion</h3>
+    <h3 class="w-100 text-center">No hay registro de ese partido</h3>
   <?php else : ?>
     <main class="">
       <div class="container bg-dark text-light rounded-top py-1">
@@ -89,7 +89,7 @@ if (isset($_POST["ID"]) && isset($_POST["Monto"]) && isset($_POST["Descripcion"]
       <hr>
       <div class="d-grid gap-2">
         <button class="btn btn-primary" type="submit">Editar</button>
-        <a href="../index.php" class="btn btn-outline-secondary">Regresar</a>
+        <a href="./index.php" class="btn btn-outline-secondary">Regresar</a>
       </div>
     </main>
   <?php endif; ?>

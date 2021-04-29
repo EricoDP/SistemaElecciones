@@ -36,18 +36,15 @@ $puestos = $service->GetList();
                 <div class="col" style="max-width: 400px; min-width: 200px;">
                     <div class="card shadow-sm">
                         <div class="card-header bg-dark text-light">
-                            <h5 class="card-title"><?= $puesto->ID ?> <?= $puesto->Nombre ?></h5>
+                            <h5 class="card-title"><?= $puesto->Nombre ?></h5>
                         </div>
-                        <img src="../../assets/img/<?= $puesto->Logo ?>" class="card-img-top" alt="..." style="height: 250px;">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID <?= $puesto->ID ?></li>
-                            <li class="list-group-item">Nombre <?= $puesto->Nombre ?></li>
-                            <li class="list-group-item">Descripcion <?= $puesto->Descripcion ?></li>
+                            <li class="list-group-item"><?= $puesto->Descripcion ?></li>
                             <li class="list-group-item">
-                                <?php if ($puesto->Status == 'Activo') : ?>
-                                    <span class="text-success fw-bold"><?= $puesto->Status ?></span>
+                                <?php if ($puesto->Status == true) : ?>
+                                    <span class="text-success fw-bold">Activo</span>
                                 <?php else : ?>
-                                    <span class="text-danger fw-bold"><?= $puesto->Status ?></span>
+                                    <span class="text-danger fw-bold">Inactivo</span>
                                 <?php endif; ?>
                             </li>
                         </ul>
