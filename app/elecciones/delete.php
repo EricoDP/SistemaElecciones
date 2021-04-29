@@ -17,7 +17,7 @@ require_once '../../services/ServiceFile.php';
     $service->Delete($_GET["id"]);
   }
 
-  header("Location: ../index.php");
+  header("Location: ./index.php");
   exit();
 
 ?>
