@@ -17,7 +17,7 @@ require_once '../../models/ciudadanos.php';
     $service->Delete($_GET["id"]);
   }
 
-  header("Location: ../index.php");
+  header("Location: ./index.php");
   exit();
 
 ?>
