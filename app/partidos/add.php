@@ -8,11 +8,11 @@ require_once '../../handlers/Logger.php';
 
 require_once '../../services/iServiceFile.php';
 require_once '../../services/ServiceFileBase.php';
-require_once '../../services/partidosService.php';
+require_once '../../services/ServiceFile.php';
 require_once '../../services/utilities.php';
 require_once '../../models/partidos.php';
 
-$service = new partidosService();
+$service = new ServiceFile("partidos");
 
 if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
   if ($_POST["Monto"] != "" && isset($_POST["Descripcion"]) != null) {
