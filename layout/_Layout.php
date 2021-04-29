@@ -13,7 +13,6 @@
       <!--Bootstrap-->
       <link rel="stylesheet" href="../../assets/plugin/css/bootstrap.min.css">
       <script src="../../assets/plugin/js/bootstrap.min.js"></script>
-      <script src="../../assets/script/site.js"></script>
       <title>Sistema de Elecciones</title>
     </head>
     <body>
@@ -32,6 +31,7 @@ EOF;
     $content = <<<EOF
     
       </main>
+    <script src="../../assets/script/site.js"></script>
     </body>
     </html>
 EOF;
