@@ -10,12 +10,12 @@ require_once '../../services/iServiceFile.php';
 require_once '../../services/ServiceFileBase.php';
 require_once '../../services/ServiceFile.php';
 require_once '../../services/utilities.php';
-require_once '../../models/partidos.php';
+require_once '../../models/puestos.php';
 
-$service = new ServiceFile("partidos");
+$service = new ServiceFile("puestos");
 $utilities = new Utilities();
 
-$partidos = $service->GetList();
+$puestos = $service->GetList();
 
 ?>
 
@@ -23,38 +23,38 @@ $partidos = $service->GetList();
 
 <div class="container">
     <div class="bg-light p-5 rounded">
-        <h1>Partidos</h1>
+        <h1>puestos</h1>
         <a href="./add.php" type="button" class="btn btn-primary btn-lg">Agregar registro</a>
     </div>
 </div>
 <div class="py-5 mt-5 w-100 h-100 bg-light">
     <div class="container">
-        <?php if (count($partidos) < 1) : ?>
-            <h3 class="w-100 text-center">No hay registros de partidos</h3>
+        <?php if (count($puestos) < 1) : ?>
+            <h3 class="w-100 text-center">No hay registros de puestos</h3>
         <?php else : ?>
-            <?php foreach ($partidos as $key => $partido) : ?>
+            <?php foreach ($puestos as $key => $puesto) : ?>
                 <div class="col" style="max-width: 400px; min-width: 200px;">
                     <div class="card shadow-sm">
                         <div class="card-header bg-dark text-light">
-                            <h5 class="card-title"><?= $partido->ID ?> <?= $partido->Nombre ?></h5>
+                            <h5 class="card-title"><?= $puesto->ID ?> <?= $puesto->Nombre ?></h5>
                         </div>
-                        <img src="../../assets/img/<?= $partido->Logo ?>" class="card-img-top" alt="..." style="height: 250px;">
+                        <img src="../../assets/img/<?= $puesto->Logo ?>" class="card-img-top" alt="..." style="height: 250px;">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID <?= $partido->ID ?></li>
-                            <li class="list-group-item">Nombre <?= $partido->Nombre ?></li>
-                            <li class="list-group-item">Descripcion <?= $partido->Descripcion ?></li>
+                            <li class="list-group-item">ID <?= $puesto->ID ?></li>
+                            <li class="list-group-item">Nombre <?= $puesto->Nombre ?></li>
+                            <li class="list-group-item">Descripcion <?= $puesto->Descripcion ?></li>
                             <li class="list-group-item">
-                                <?php if ($partido->Status == 'Activo') : ?>
-                                    <span class="text-success fw-bold"><?= $partido->Status ?></span>
+                                <?php if ($puesto->Status == 'Activo') : ?>
+                                    <span class="text-success fw-bold"><?= $puesto->Status ?></span>
                                 <?php else : ?>
-                                    <span class="text-danger fw-bold"><?= $partido->Status ?></span>
+                                    <span class="text-danger fw-bold"><?= $puesto->Status ?></span>
                                 <?php endif; ?>
                             </li>
                         </ul>
                         <div class="card-body">
                             <div class="btn-group">
-                                <a href="./partidos/edit.php?id=<?= $partido->ID ?>" type="button" class="btn btn-success">Editar</a>
-                                <button onclick="deleteItem('./delete.php?id=<?= $partido->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
+                                <a href="./puestos/edit.php?id=<?= $puesto->ID ?>" type="button" class="btn btn-success">Editar</a>
+                                <button onclick="deleteItem('./delete.php?id=<?= $puesto->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
                             </div>
                         </div>
                     </div>
