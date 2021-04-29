@@ -7,7 +7,7 @@
     public $Estado;
     public $Logo;
 
-    public function __construct($nombre, $estado, $descripcion, $logo)
+    public function __construct($nombre, $descripcion, $logo, $estado)
     {
       $this->Nombre = $nombre;
       $this->Descripcion = $descripcion;

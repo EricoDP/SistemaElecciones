@@ -3,7 +3,7 @@
 class Logger
 {
 
-  private $Path = "../data/Log.txt";
+  private $Path = "../../data/Log.text";
   private $Operation;
   private $Item;
   private $Content;

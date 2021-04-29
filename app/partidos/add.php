@@ -14,17 +14,30 @@ require_once '../../models/partidos.php';
 
 $service = new ServiceFile("partidos");
 
-if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
-  if ($_POST["Monto"] != "" && isset($_POST["Descripcion"]) != null) {
-    date_default_timezone_set("America/Santo_Domingo");
-    $fecha = date('d-m-y h:iA', time());
+if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Logo"])) {
+  if ($_POST["Nombre"] != "" && isset($_POST["Descripcion"]) != null) {
 
+    $target_dir = "../../assets/img/";
+    if(!is_dir($target_dir)){
+      mkdir($target_dir, 0755);
+    }
 
-    $service->Add($transaccion);
+    $imgname = $_FILES["Logo"]["tmp_name"];
+    $imgdestination = $target_dir . $_FILES["Logo"]["name"];
+
+    $partido = new Partido(
+      $_POST["Nombre"],
+      $_POST["Descripcion"],
+      "img/" . $_FILES["Logo"]["name"],
+      True
+    );
+
+    $service->Add($partido);
+
   } else {
     echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
   }
-  header("Location: ../index.php");
+  header("Location: ./index.php");
 }
 
 ?>
@@ -32,14 +45,10 @@ if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
 <?php topContent() ?>
 
 <div class="container">
-  <form class="ms-1 border border-rounded" action="./index.php" method="POST" enctype="multipart/form-data">
+  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
       <div class="fw-bold">Agregar partido</div>
       <div class="ms-1">
-        <div class="mb-3">
-          <label for="txtID" class="form-label">ID</label>
-          <input type="number" class="form-control" name="ID">
-        </div>
         <div class="mb-3">
           <label for="txtNombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" name="Nombre">
