@@ -16,11 +16,11 @@
   $service = new ServiceFile("ciudadanos");
 
   $transaccion = null;
-  if(isset($_GET["id"])){
-    $transaccion = $service->GetByID($_GET["id"]);
+  if(isset($_GET["Doc"])){
+    $transaccion = $service->GetByID($_GET["Doc"]);
   }
 
-  if(isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Apellido"])&& isset($_POST["Email"])&& isset($_POST["Estado"]) && isset($_POST["Fecha"])){
+  if(isset($_POST["Documento"]) && isset($_POST["Nombre"]) && isset($_POST["Apellido"])&& isset($_POST["Email"])&& isset($_POST["Estado"]) && isset($_POST["Fecha"])){
 
     $transaccion = new Transaccion(
       $_POST["Fecha"],
@@ -48,6 +48,12 @@
           <label for="txtNombre" class="form-label">Nombre</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="Nombre">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="txtDocumento" class="form-label">Documento de identidad</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="Documento">
           </div>
         </div>
         <div class="md-3">
