@@ -9,10 +9,14 @@
   require_once '../../services/iServiceFile.php';
   require_once '../../services/ServiceFileBase.php';
   require_once '../../services/candidatosService.php';
+  require_once '../../services/partidosService.php';
   require_once '../../services/utilities.php';
   require_once '../../models/candidatos.php';
 
   $service = new candidatosService();
+  $partidoService = new partidosService();
+
+  $partidos = $partidoService->GetList();
 
   if(isset($_POST["Monto"]) && isset($_POST["Descripcion"]))
   {
@@ -52,8 +56,8 @@
           <select class="form-select" aria-label="Select Partido_pertenece" id="cbPartido_pertenece" name="Partido_perteneceID">
             <option selected>Seleccione una opcion</option>
 
-            <?php foreach($utilities->carreras as $id => $value):?>
-              <option value="<?= $id;?>"><?= $value;?></option>
+            <?php foreach($partidos as $key => $partido):?>
+              <option value="<?= $partido->ID?>"><?= $partido->Nombre;?></option>
             <?php endforeach;?>
 
           </select>
@@ -63,8 +67,8 @@
           <select class="form-select" aria-label="Select Partido_aspira" id="cbPartido_aspira" name="Partido_aspiraID">
             <option selected>Seleccione una opcion</option>
 
-            <?php foreach($utilities->carreras as $id => $value):?>
-              <option value="<?= $id;?>"><?= $value;?></option>
+            <?php foreach($partidos as $key => $partido):?>
+              <option value="<?= $partido->ID?>"><?= $partido->Nombre;?></option>
             <?php endforeach;?>
 
           </select>
