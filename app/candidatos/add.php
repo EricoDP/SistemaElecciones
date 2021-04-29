@@ -1,17 +1,16 @@
 <?php
-  include '../../layout/_Layout.php';
+include '../../layout/_Layout.php';
 
-  require_once '../../handlers/IFileHandler.php';
-  require_once '../../handlers/FileHandlerBase.php';
-  require_once '../../handlers/JsonFileHandler.php';
-  require_once '../../handlers/Logger.php';
-  
-  require_once '../../services/iServiceFile.php';
-  require_once '../../services/ServiceFileBase.php';
-  require_once '../../services/ServiceFile.php';
-  require_once '../../services/ServiceFile.php';
-  require_once '../../services/utilities.php';
-  require_once '../../models/candidatos.php';
+require_once '../../handlers/IFileHandler.php';
+require_once '../../handlers/FileHandlerBase.php';
+require_once '../../handlers/JsonFileHandler.php';
+require_once '../../handlers/Logger.php';
+
+require_once '../../services/iServiceFile.php';
+require_once '../../services/ServiceFileBase.php';
+require_once '../../services/ServiceFile.php';
+require_once '../../services/utilities.php';
+require_once '../../models/candidatos.php';
 
   $service = new ServiceFile("candidatos");
   $partidoService = new ServiceFile("partidos");
@@ -46,7 +45,7 @@
     else{
       echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
     }
-    header("Location: ../index.php");
+    header("Location: ./index.php");
   }
 
 ?>

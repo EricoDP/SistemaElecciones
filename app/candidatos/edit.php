@@ -31,7 +31,7 @@
 
     $transaccion->ID = $_POST["ID"];
     $service->Edit($transaccion);
-    header("Location: ../index.php");
+    header("Location: ./index.php");
   }
 
 ?>
