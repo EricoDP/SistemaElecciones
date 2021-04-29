@@ -7,5 +7,35 @@
     "puesto": "",
     "foto": "",
     "estado": false
+  },
+
+  "ciudadanos": {
+    "id": "",
+    "nombre": "",
+    "apellido": "",
+    "email": "",
+    "estado": false
+  },
+
+  "elecciones": {
+    "id": "",
+    "nombre": "",
+    "fecha_realizacion": "",
+    "estado": false
+  },
+
+  "partidos": {
+    "id": "",
+    "nombre": "",
+    "descripcion": "",
+    "logo_partido": "",
+    "estado": false
+  },
+
+  "puestos_electivos": {
+    "id": "",
+    "nombre": "",
+    "descripcion": "",
+    "estado": ""
   }
 }
