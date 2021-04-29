@@ -48,9 +48,9 @@ if (isset($_POST["Monto"]) && isset($_POST["Descripcion"])) {
           <label for="txtDescripcion" class="form-label">Descripcion</label>
           <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"></textarea>
         </div>
-        <div>
-          <label for="txtLogo" class="form-label">Logo</label>
-          <input type="text" class="form-control" name="Logo">
+        <div class="mb-3">
+          <label for="imgLogo" class="form-label">Logo</label>
+          <input class="form-control" type="file" id="imgLogo" name="Logo">
         </div>
       </div>
     </div>
