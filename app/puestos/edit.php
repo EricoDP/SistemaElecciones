@@ -11,7 +11,7 @@ require_once '../helpers/utilities.php';
 require_once '../models/puesto.php';
 
 $utilities = new Utilities();
-$service = new ServiceFile("../");
+$service = new ServiceFile("puestos");
 
 $puesto = null;
 if (isset($_GET["id"])) {
