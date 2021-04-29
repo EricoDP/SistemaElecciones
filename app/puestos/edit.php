@@ -8,7 +8,7 @@ require_once '../FileHandler/Logger.php';
 
 require_once './serviceFile.php';
 require_once '../helpers/utilities.php';
-require_once '../models/puesto.php';
+require_once '../models/puestos.php';
 
 $utilities = new Utilities();
 $service = new ServiceFile("puestos");

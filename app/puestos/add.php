@@ -10,9 +10,9 @@ require_once '../../services/iServiceFile.php';
 require_once '../../services/ServiceFileBase.php';
 require_once '../../services/ServiceFile.php';
 require_once '../../services/utilities.php';
-require_once '../../models/puesto.php';
+require_once '../../models/puestos.php';
 
-$service = new ServiceFile("puesto");
+$service = new ServiceFile("puestos");
 
 if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"])) {
   if ($_POST["Nombre"] != "" && isset($_POST["Descripcion"]) != null) {
