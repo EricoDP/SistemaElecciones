@@ -1,5 +1,5 @@
 <?php
-  class Partidos
+  class Partido
   {
     public $ID;
     public $Nombre;

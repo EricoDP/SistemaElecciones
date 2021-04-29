@@ -1,5 +1,5 @@
 <?php
-  class Elecciones
+  class Eleccione
   {
     public $ID;
     public $Nombre;
