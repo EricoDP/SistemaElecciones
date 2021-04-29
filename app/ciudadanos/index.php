@@ -39,7 +39,7 @@ $ciudadanos = $service->GetList();
               <h5 class="card-title"><?= $ciudadano->Nombre ?> <?= $ciudadano->Apellido ?></h5>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Documento <?= $ciudadano->Documento ?></li>
+              <li class="list-group-item">Documento <?= $ciudadano->ID ?></li>
               <li class="list-group-item">Nombre <?= $ciudadano->Nombre ?></li>
               <li class="list-group-item">Apellido<?= $ciudadano->Apellido ?></li>
               <li class="list-group-item">Correo <?= $ciudadano->Email ?></li>
@@ -53,8 +53,8 @@ $ciudadanos = $service->GetList();
             </ul>
             <div class="card-body">
               <div class="btn-group">
-                <a href="./operations/edit.php?id=<?= $ciudadano->Documento ?>" type="button" class="btn btn-success">Editar</a>
-                <button onclick="deleteItem('./delete.php?id=<?= $ciudadano->Documento ?>')" type="button" class="btn btn-danger">Eliminar</button>
+                <a href="./operations/edit.php?id=<?= $ciudadano->ID ?>" type="button" class="btn btn-success">Editar</a>
+                <button onclick="deleteItem('./delete.php?id=<?= $ciudadano->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
               </div>
             </div>
           </div>
