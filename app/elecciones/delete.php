@@ -7,11 +7,11 @@ require_once '../../handlers/Logger.php';
 
 require_once '../../services/iServiceFile.php';
 require_once '../../services/ServiceFileBase.php';
-require_once '../../services/eleccionesService.php';
-require_once '../../services/utilities.php';
-require_once '../../models/elecciones.php';
+require_once '../../services/ServiceFile.php';
+  require_once '../../services/utilities.php';
+  require_once '../../models/elecciones.php';
 
-  $service = new eleccionesService();
+  $service = new ServiceFile("elecciones");
 
   if(isset($_GET["id"])){
     $service->Delete($_GET["id"]);

@@ -8,12 +8,12 @@
   
   require_once '../../services/iServiceFile.php';
   require_once '../../services/ServiceFileBase.php';
-  require_once '../../services/ciudadanosService.php';
+  require_once '../../services/ServiceFile.php';
   require_once '../../services/utilities.php';
   require_once '../../models/ciudadanos.php';
 
   $utilities = new Utilities();
-  $service = new ciudadanosService();
+  $service = new ServiceFile("ciudadanos");
 
   $transaccion = null;
   if(isset($_GET["id"])){
