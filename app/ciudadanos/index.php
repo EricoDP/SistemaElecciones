@@ -29,38 +29,39 @@ $ciudadanos = $service->GetList();
 </div>
 <div class="py-5 mt-5 w-100 h-100 bg-light">
   <div class="container">
-    <?php if (count($ciudadanos) < 1) : ?>
-      <h3 class="w-100 text-center">No hay registros de ciudadanos</h3>
-    <?php else : ?>
-      <?php foreach ($ciudadanos as $key => $ciudadano) : ?>
-        <div class="col" style="max-width: 400px; min-width: 200px;">
-          <div class="card shadow-sm">
-            <div class="card-header bg-dark text-light">
-              <h5 class="card-title"><?= $ciudadano->Nombre ?> <?= $ciudadano->Apellido ?></h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Documento <?= $ciudadano->ID ?></li>
-              <li class="list-group-item">Nombre <?= $ciudadano->Nombre ?></li>
-              <li class="list-group-item">Apellido<?= $ciudadano->Apellido ?></li>
-              <li class="list-group-item">Correo <?= $ciudadano->Email ?></li>
-              <li class="list-group-item">
-                <?php if ($ciudadano->Status == 'Activo') : ?>
-                  <span class="text-success fw-bold"><?= $ciudadano->Status ?></span>
-                <?php else : ?>
-                  <span class="text-danger fw-bold"><?= $ciudadano->Status ?></span>
-                <?php endif; ?>
-              </li>
-            </ul>
-            <div class="card-body">
-              <div class="btn-group">
-                <a href="./edit.php?id=<?= $ciudadano->ID ?>" type="button" class="btn btn-success">Editar</a>
-                <button onclick="deleteItem('./delete.php?id=<?= $ciudadano->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-around">
+      <?php if (count($ciudadanos) < 1) : ?>
+        <h3 class="w-100 text-center">No hay registros de ciudadanos</h3>
+      <?php else : ?>
+        <?php foreach ($ciudadanos as $key => $ciudadano) : ?>
+          <div class="col" style="max-width: 400px; min-width: 200px;">
+            <div class="card shadow-sm">
+              <div class="card-header bg-dark text-light">
+                <h5 class="card-title"><?= $ciudadano->Nombre ?> <?= $ciudadano->Apellido ?></h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><?= $ciudadano->Nombre ?></li>
+                <li class="list-group-item"><?= $ciudadano->Apellido ?></li>
+                <li class="list-group-item"><?= $ciudadano->Email ?></li>
+                <li class="list-group-item">
+                  <?php if ($ciudadano->Estado == True) : ?>
+                    <span class="text-success fw-bold">Activo</span>
+                  <?php else : ?>
+                    <span class="text-danger fw-bold">Inactivo</span>
+                  <?php endif; ?>
+                </li>
+              </ul>
+              <div class="card-body">
+                <div class="btn-group">
+                  <a href="./edit.php?id=<?= $ciudadano->ID ?>" type="button" class="btn btn-success">Editar</a>
+                  <button onclick="deleteItem('./delete.php?id=<?= $ciudadano->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <?php endforeach; ?>
-    <?php endif; ?>
+        <?php endforeach; ?>
+      <?php endif; ?>
+    </div>
   </div>
 </div>
 
