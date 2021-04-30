@@ -17,5 +17,9 @@
 - [29/04/21 08:29PM][Insertar]: {"ID":"608b4f610583f1.64646287","Nombre":"Presidente","Descripcion":true,"Estado":"De verdad"} 
 >>>>>>> 9fa0671b36ca8ba0345f2352df1dc9e4b366e9e8
 >>>>>>> 41091a6117f97098795c167743fc9996e20c9ab5
+<<<<<<< HEAD
 - [29/04/21 09:06PM][Insertar]: {"ID":"608b581dc08626.51306428","Nombre":"asfasfasf","Descripcion":true,"Estado":"asfasfasfasfa"} 
 - [29/04/21 09:06PM][Eliminar]: Delete {"ID":"608b4f610583f1.64646287","Nombre":"Presidente","Descripcion":true,"Estado":"De verdad"} 
+=======
+- [29/04/21 09:06PM][Insertar]: {"ID":"608b57f97174e5.43649679","Nombre":"a","Apellido":"a","Email":"a","Usuario":"a","Password":"a","Estado":true} 
+>>>>>>> 0100bbaef0ccb6ccb63867b6efa31544df09b794
