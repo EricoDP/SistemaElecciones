@@ -40,7 +40,7 @@
 <?php topContent()?>
 
 <div class="container">
-  <form class="ms-1 border border-rounded" action="./operations/add.php" method="POST" enctype="multipart/form-data">
+  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
       <div class="fw-bold">Agregar ciudadano</div>
       <div class="ms-1">
