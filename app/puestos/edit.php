@@ -57,7 +57,7 @@ if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"
           </div>
           <div class="md-3">
             <label for="txtDescripcion" class="form-label">Descripcion</label>
-            <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"><?= $partido->Descripcion ?></textarea>
+            <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"><?= $puesto->Descripcion ?></textarea>
           </div>
         </div>
         <div class="d-grid gap-2">
