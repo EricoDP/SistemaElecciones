@@ -38,7 +38,7 @@ $partidos = $service->GetList();
             <div class="card-header bg-dark text-light">
               <h5 class="card-title"><?= $partido->Nombre ?></h5>
             </div>
-            <img src="../../assets/img/<?= $partido->Logo ?>" class="card-img-top" alt="..." style="height: 250px;">
+            <img src="../../assets/<?= $partido->Logo ?>" class="card-img-top" alt="..." style="height: 250px;">
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><?= $partido->Descripcion ?></li>
               <li class="list-group-item">

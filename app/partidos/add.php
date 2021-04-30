@@ -51,15 +51,15 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
     <div class="modal-body">
       <div class="fw-bold">Agregar partido</div>
       <div class="ms-1">
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="txtNombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" name="Nombre">
         </div>
-        <div class="md-3">
+        <div class="mb-4">
           <label for="txtDescripcion" class="form-label">Descripcion</label>
           <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"></textarea>
         </div>
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="imgLogo" class="form-label">Logo</label>
           <input class="form-control" type="file" id="imgLogo" name="Logo">
         </div>

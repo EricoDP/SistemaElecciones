@@ -13,6 +13,7 @@ require_once '../../services/utilities.php';
 require_once '../../models/candidatos.php';
 
 $service = new ServiceFile("candidatos");
+$servicePartidos = new ServiceFile("partidos");
 $utilities = new Utilities();
 
 $candidatos = $service->GetList();
@@ -39,10 +40,10 @@ $candidatos = $service->GetList();
               <div class="card-header bg-dark text-light">
                 <h5 class="card-title"><?= $candidato->Nombre ?> <?= $candidato->Apellido ?></h5>
               </div>
-              <img src="../../assets/img/<?= $candidato->Foto ?>" class="card-img-top" alt="..." style="height: 250px;">
+              <img src="../../assets/<?= $candidato->Foto ?>" class="card-img-top" alt="..." style="height: 250px;">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Pertenece a <?= $candidato->Partido_pertenece ?></li>
-                <li class="list-group-item">Aspira a <?= $candidato->Partido_pertenece ?></li>
+                <li class="list-group-item">Pertenece a <?= $servicePartidos->GetByID($candidato->Partido_pertenece)->Nombre ?></li>
+                <li class="list-group-item">Aspira a <?= $servicePartidos->GetByID($candidato->Partido_aspira)->Nombre ?></li>
                 <li class="list-group-item">
                   <?php if ($candidato->Estado == True) : ?>
                     <span class="text-success fw-bold">Activo</span>
