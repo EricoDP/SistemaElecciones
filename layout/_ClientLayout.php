@@ -19,6 +19,9 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Sistema de Elecciones</a>
+          <form class="form-inline">
+            <a href="../candidatos/" class="btn btn-primary my-2 my-sm-0">Administrador</a>
+          </form>
         </div>
       </nav>
       <main class="bg-white">

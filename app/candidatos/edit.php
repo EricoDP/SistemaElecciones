@@ -52,7 +52,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
       $_POST["Apellido"],
       $_POST["Partido_perteneceID"],
       $_POST["Partido_aspiraID"],
-      "img/" . $_FILES["Foto"]["name"],
+      $img,
       $estado
     );
 
@@ -90,11 +90,13 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
               <option selected>Seleccione una opcion</option>
               
               <?php foreach ($partidos as $key => $partido) : ?>
-                <option value="<?= $partido->ID ?>"
-                <?php if ($partido->ID == $candidato->Partido_pertenece): ?>
-                  selected
+                <?php if($partido->Estado == true): ?>
+                  <option value="<?= $partido->ID ?>"
+                  <?php if ($partido->ID == $candidato->Partido_pertenece): ?>
+                    selected
+                  <?php endif; ?>
+                  ><?= $partido->Nombre; ?></option>
                 <?php endif; ?>
-                ><?= $partido->Nombre; ?></option>
               <?php endforeach; ?>
 
             </select>
@@ -105,11 +107,13 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
               <option selected>Seleccione una opcion</option>
 
               <?php foreach ($partidos as $key => $partido) : ?>
-                <option value="<?= $partido->ID ?>"
-                <?php if ($partido->ID == $candidato->Partido_aspira): ?>
-                  selected
+                <?php if($partido->Estado == true): ?>
+                  <option value="<?= $partido->ID ?>"
+                  <?php if ($partido->ID == $candidato->Partido_aspira): ?>
+                    selected
+                  <?php endif; ?>
+                  ><?= $partido->Nombre; ?></option>
                 <?php endif; ?>
-                ><?= $partido->Nombre; ?></option>
               <?php endforeach; ?>
 
             </select>

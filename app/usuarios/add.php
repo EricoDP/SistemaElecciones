@@ -19,7 +19,6 @@ require_once '../../models/usuarios.php';
   {
     if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Email"] != null) && ($_POST["Usuario"] != null) && ($_POST["Password"] != null))
     {
-      
 
       $usuario = new usuario(
         $_POST["Nombre"],

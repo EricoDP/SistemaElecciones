@@ -1,7 +1,5 @@
 <?php
 
-include '../../layout/_Layout.php';
-
 require_once '../../handlers/IFileHandler.php';
 require_once '../../handlers/FileHandlerBase.php';
 require_once '../../handlers/JsonFileHandler.php';
@@ -11,9 +9,9 @@ require_once '../../services/iServiceFile.php';
 require_once '../../services/ServiceFileBase.php';
 require_once '../../services/ServiceFile.php';
 require_once '../../services/utilities.php';
-require_once '../../models/usuario.php';
+require_once '../../models/usuarios.php';
 
-  $service = new ServiceFile("usuario");
+  $service = new ServiceFile("usuarios");
 
   if(isset($_GET["id"])){
     $service->Delete($_GET["id"]);

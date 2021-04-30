@@ -45,7 +45,7 @@ if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"
     $partido = new Partido(
       $_POST["Nombre"],
       $_POST["Descripcion"],
-      "img/" . $_FILES["Logo"]["name"],
+      $img,
       $estado
     );
 

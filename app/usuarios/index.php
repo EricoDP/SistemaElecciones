@@ -41,8 +41,8 @@ $usuarios = $service->GetList();
                 <h5 class="card-title"><?= $usuario->Nombre ?> <?= $usuario->Apellido ?></h5>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Usuario <?= $servicePartidos->GetByID($usuario->Usuario) ?></li>
-                <li class="list-group-item">Pertenece a <?= $servicePartidos->GetByID($usuario->Nombre) ?></li>
+              <li class="list-group-item">mail: <?= $usuario->Email ?></li>
+                <li class="list-group-item">user: <?= $usuario->Usuario ?></li>
                 <li class="list-group-item">
                   <?php if ($usuario->Estado == True) : ?>
                     <span class="text-success fw-bold">Activo</span>

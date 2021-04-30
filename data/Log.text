@@ -46,3 +46,57 @@
 - [29/04/21 09:44PM][Insertar]: {"ID":"608b60ebf162f4.30591298","Nombre":"PLD","Descripcion":"sdfsdfs","Estado":true,"Logo":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png"} 
 - [29/04/21 09:45PM][Insertar]: {"ID":"608b6140a3b390.40860613","Nombre":"asdasd","Apellido":"asdasd","Partido_pertenece":"608b60ebf162f4.30591298","Partido_aspira":"608b60ebf162f4.30591298","Foto":"img\/Leonel-Fern\u00e1ndez.png","Estado":true} 
 - [29/04/21 09:45PM][Insertar]: {"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"} 
+- [29/04/21 09:46PM][Editar]: Change {{"ID":"608b60ebf162f4.30591298","Nombre":"PLD","Descripcion":"sdfsdfs","Estado":true,"Logo":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png"}} To {"ID":"608b60ebf162f4.30591298","Nombre":"PLD","Descripcion":"sdfsdfs","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:47PM][Editar]: Change {{"ID":"608b60ebf162f4.30591298","Nombre":"PLD","Descripcion":"sdfsdfs","Estado":false,"Logo":"img\/"}} To {"ID":"608b60ebf162f4.30591298","Nombre":"PLD","Descripcion":"sdfsdfs","Estado":true,"Logo":"img\/"} 
+- [29/04/21 09:47PM][Editar]: Change {{"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"}} To {"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:48PM][Editar]: Change {{"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"}} To {"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:48PM][Editar]: Change {{"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"}} To {"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:48PM][Editar]: Change {{"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"}} To {"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:48PM][Eliminar]: Delete {"ID":"608b60ebf162f4.30591298","Nombre":"PLD","Descripcion":"sdfsdfs","Estado":true,"Logo":"img\/"} 
+- [29/04/21 09:48PM][Eliminar]: Delete {"ID":"608b614dc302b0.81217428","Nombre":"prm","Descripcion":"dsdfgsdg","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:48PM][Insertar]: {"ID":"608b61efc63561.53214390","Nombre":"aasdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"} 
+- [29/04/21 09:48PM][Editar]: Change {{"ID":"608b61efc63561.53214390","Nombre":"aasdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"}} To {"ID":"608b61efc63561.53214390","Nombre":"aasdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/"} 
+- [29/04/21 09:49PM][Editar]: Change {{"ID":"608b61efc63561.53214390","Nombre":"aasdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/"}} To {"ID":"608b61efc63561.53214390","Nombre":"aasdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/"} 
+- [29/04/21 09:49PM][Eliminar]: Delete {"ID":"608b61efc63561.53214390","Nombre":"aasdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/"} 
+- [29/04/21 09:49PM][Insertar]: {"ID":"608b62174a9556.55082816","Nombre":"PLD","Descripcion":"asdasdasd","Estado":true,"Logo":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png"} 
+- [29/04/21 09:49PM][Editar]: Change {{"ID":"608b62174a9556.55082816","Nombre":"PLD","Descripcion":"asdasdasd","Estado":true,"Logo":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png"}} To {"ID":"608b62174a9556.55082816","Nombre":"PLD","Descripcion":"asdasdasd","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:50PM][Eliminar]: Delete {"ID":"608b62174a9556.55082816","Nombre":"PLD","Descripcion":"asdasdasd","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:50PM][Insertar]: {"ID":"608b6262b0e809.32413297","Nombre":"asdasda","Descripcion":"asdas","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"} 
+- [29/04/21 09:50PM][Editar]: Change {{"ID":"608b6262b0e809.32413297","Nombre":"asdasda","Descripcion":"asdas","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"}} To {"ID":"608b6262b0e809.32413297","Nombre":"asdasda","Descripcion":"asdas","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:51PM][Eliminar]: Delete {"ID":"608b6262b0e809.32413297","Nombre":"asdasda","Descripcion":"asdas","Estado":false,"Logo":"img\/"} 
+- [29/04/21 09:51PM][Insertar]: {"ID":"608b62b6289291.54009034","Nombre":"asdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/Leonel-Fern\u00e1ndez.png"} 
+- [29/04/21 09:51PM][Editar]: Change {{"ID":"608b62b6289291.54009034","Nombre":"asdas","Descripcion":"dasdasd","Estado":true,"Logo":"img\/Leonel-Fern\u00e1ndez.png"}} To {"ID":"608b62b6289291.54009034","Nombre":"asdas","Descripcion":"dasdasd","Estado":false,"Logo":"img\/Leonel-Fern\u00e1ndez.png"} 
+- [29/04/21 09:51PM][Eliminar]: Delete {"ID":"608b62b6289291.54009034","Nombre":"asdas","Descripcion":"dasdasd","Estado":false,"Logo":"img\/Leonel-Fern\u00e1ndez.png"} 
+- [29/04/21 09:52PM][Insertar]: {"ID":"608b62c5a0c442.93151472","Nombre":"PLD","Descripcion":"adasda","Estado":true,"Logo":"img\/Leonel-Fern\u00e1ndez.png"} 
+- [29/04/21 09:52PM][Editar]: Change {{"ID":"608b62c5a0c442.93151472","Nombre":"PLD","Descripcion":"adasda","Estado":true,"Logo":"img\/Leonel-Fern\u00e1ndez.png"}} To {"ID":"608b62c5a0c442.93151472","Nombre":"PLD","Descripcion":"adasda","Estado":true,"Logo":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png"} 
+- [29/04/21 09:52PM][Insertar]: {"ID":"608b62d931cb03.78037644","Nombre":"PRM","Descripcion":"adas","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"} 
+- [29/04/21 09:52PM][Eliminar]: Delete {"ID":"608b6140a3b390.40860613","Nombre":"asdasd","Apellido":"asdasd","Partido_pertenece":"608b60ebf162f4.30591298","Partido_aspira":"608b60ebf162f4.30591298","Foto":"img\/Leonel-Fern\u00e1ndez.png","Estado":true} 
+- [29/04/21 09:52PM][Insertar]: {"ID":"608b62e6e5e425.47893373","Nombre":"asdas","Apellido":"dasdasd","Partido_pertenece":"608b62d931cb03.78037644","Partido_aspira":"608b62d931cb03.78037644","Foto":"img\/tVF8IuPQ.jpg","Estado":true} 
+- [29/04/21 09:52PM][Insertar]: {"ID":"608b62f0ad4d78.95835842","Nombre":"asdas","Apellido":"dasd","Partido_pertenece":"608b62c5a0c442.93151472","Partido_aspira":"608b62c5a0c442.93151472","Foto":"img\/Leonel-Fern\u00e1ndez.png","Estado":true} 
+- [29/04/21 09:53PM][Editar]: Change {{"ID":"608b62d931cb03.78037644","Nombre":"PRM","Descripcion":"adas","Estado":true,"Logo":"img\/aHhMEiC1_400x400.jpg"}} To {"ID":"608b62d931cb03.78037644","Nombre":"PRM","Descripcion":"adas","Estado":false,"Logo":"img\/aHhMEiC1_400x400.jpg"} 
+- [29/04/21 10:00PM][Insertar]: {"ID":"608b64cdbbf5b1.12643693","Nombre":"a","Apellido":"a","Email":"a","Usuario":"a","Password":"sdfsdfs","Estado":true} 
+- [29/04/21 10:01PM][Eliminar]: Delete null 
+- [29/04/21 10:01PM][Eliminar]: Delete null 
+- [29/04/21 10:01PM][Eliminar]: Delete null 
+- [29/04/21 10:11PM][Editar]: Change {{"ID":"608b581dc08626.51306428","Nombre":"asfasfasf","Descripcion":true,"Estado":"asfasfasfasfa"}} To {"ID":"608b581dc08626.51306428","Nombre":"asfasfasf","Descripcion":false,"Estado":"sdfsdfs"} 
+- [29/04/21 10:11PM][Editar]: Change {{"ID":"608b581dc08626.51306428","Nombre":"asfasfasf","Descripcion":false,"Estado":"sdfsdfs"}} To {"ID":"608b581dc08626.51306428","Nombre":"asfasfasf","Descripcion":true,"Estado":"asdasda"} 
+- [29/04/21 10:12PM][Eliminar]: Delete {"ID":"608b581dc08626.51306428","Nombre":"asfasfasf","Descripcion":true,"Estado":"asdasda"} 
+- [29/04/21 10:12PM][Insertar]: {"ID":"608b6783cd5ce4.18343656","Nombre":"sacxzczxcz","Descripcion":true,"Estado":"czxczxczxcz"} 
+- [29/04/21 10:12PM][Eliminar]: Delete {"ID":"608b6783cd5ce4.18343656","Nombre":"sacxzczxcz","Descripcion":true,"Estado":"czxczxczxcz"} 
+- [29/04/21 10:12PM][Insertar]: {"ID":"608b678bdb09c9.48963801","Nombre":"asdasd","Descripcion":true,"Estado":"asdasdasda"} 
+- [29/04/21 10:13PM][Eliminar]: Delete {"ID":"608b678bdb09c9.48963801","Nombre":"asdasd","Descripcion":true,"Estado":"asdasdasda"} 
+- [29/04/21 10:14PM][Insertar]: {"ID":"608b67eb19f3a5.66292161","Nombre":"sdas","Descripcion":"asdasd","Estado":true} 
+- [29/04/21 10:14PM][Editar]: Change {{"ID":"608b67eb19f3a5.66292161","Nombre":"sdas","Descripcion":"asdasd","Estado":true}} To {"ID":"608b67eb19f3a5.66292161","Nombre":"sdas","Descripcion":"asdasd","Estado":false} 
+- [29/04/21 10:28PM][Insertar]: {"ID":"608b6b6bb1c9a9.19949952","Nombre":"asdas","Apellido":"dasdasd","Email":"asdsa","Usuario":"dasd","Password":"asdasda","Estado":true} 
+- [29/04/21 10:29PM][Insertar]: {"ID":"608b6b71d7ad10.88860094","Nombre":"asdas","Apellido":"dasdasd","Email":"asdsa","Usuario":"dasd","Password":"asdasdaasdasd","Estado":false} 
+- [29/04/21 10:31PM][Insertar]: {"ID":"608b6bf2a77550.63989676","Nombre":"asdasd","Apellido":"asdas","Email":"dasdas","Usuario":"dasdas","Password":"asdasdasd","Estado":true} 
+- [29/04/21 10:31PM][Editar]: Change {{"ID":"608b6bf2a77550.63989676","Nombre":"asdasd","Apellido":"asdas","Email":"dasdas","Usuario":"dasdas","Password":"asdasdasd","Estado":true}} To {"ID":"608b6bf2a77550.63989676","Nombre":"asdasd","Apellido":"asdas","Email":"dasdas","Usuario":"dasdasasdasdasdasd","Password":"asdasdasd","Estado":false} 
+- [29/04/21 10:38PM][Eliminar]: Delete null 
+- [29/04/21 10:38PM][Eliminar]: Delete null 
+- [29/04/21 10:38PM][Eliminar]: Delete null 
+- [29/04/21 10:38PM][Eliminar]: Delete {"ID":"608b6bf2a77550.63989676","Nombre":"asdasd","Apellido":"asdas","Email":"dasdas","Usuario":"dasdasasdasdasdasd","Password":"asdasdasd","Estado":false} 
+- [29/04/21 10:38PM][Insertar]: {"ID":"608b6dc2ee6ba6.42433866","Nombre":"e5ryhaefrthadf","Apellido":"hadfhad","Email":"dfhadf","Usuario":"hdafh","Password":"dfhadfha","Estado":true} 
+- [29/04/21 10:39PM][Eliminar]: Delete {"ID":"608b6dc2ee6ba6.42433866","Nombre":"e5ryhaefrthadf","Apellido":"hadfhad","Email":"dfhadf","Usuario":"hdafh","Password":"dfhadfha","Estado":true} 
+- [29/04/21 10:39PM][Eliminar]: Delete {"ID":"608b62e6e5e425.47893373","Nombre":"asdas","Apellido":"dasdasd","Partido_pertenece":"608b62d931cb03.78037644","Partido_aspira":"608b62d931cb03.78037644","Foto":"img\/tVF8IuPQ.jpg","Estado":true} 
+- [29/04/21 10:39PM][Eliminar]: Delete {"ID":"608b62f0ad4d78.95835842","Nombre":"asdas","Apellido":"dasd","Partido_pertenece":"608b62c5a0c442.93151472","Partido_aspira":"608b62c5a0c442.93151472","Foto":"img\/Leonel-Fern\u00e1ndez.png","Estado":true} 
+- [29/04/21 10:39PM][Eliminar]: Delete {"Nombre":"aaaaa","Apellido":"aaaaa","Documento":"aaaaa","Email":"eeee","Estado":true,"ID":null} 

@@ -56,6 +56,7 @@ if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"
       <div class="fw-bold">Formulario de puesto</div>
       <hr class="mt-0">
       <form class="ms-1" action="./edit.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="ID" value="<?= $puesto->ID ?>">
         <div class="modal-body">
           <div class="ms-1">
             <div class="mb-3">
@@ -63,7 +64,7 @@ if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"
               <input type="text" class="form-control" name="Nombre" value="<?= $puesto->Nombre ?>">
             </div>
           </div>
-          <div class="md-3">
+          <div class="mb-3">
             <label for="txtDescripcion" class="form-label">Descripcion</label>
             <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"><?= $puesto->Descripcion ?></textarea>
           </div>

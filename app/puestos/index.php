@@ -42,7 +42,7 @@ $puestos = $service->GetList();
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><?= $puesto->Descripcion ?></li>
                 <li class="list-group-item">
-                  <?php if ($puesto->Estado == "activado") : ?>
+                  <?php if ($puesto->Estado == True) : ?>
                     <span class="text-success fw-bold">Activo</span>
                   <?php else : ?>
                     <span class="text-danger fw-bold">Inactivo</span>
