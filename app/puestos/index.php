@@ -23,7 +23,7 @@ $puestos = $service->GetList();
 
 <div class="container">
     <div class="bg-light p-5 rounded">
-        <h1>puestos</h1>
+        <h1>Puestos</h1>
         <a href="./add.php" type="button" class="btn btn-primary btn-lg">Agregar registro</a>
     </div>
 </div>
