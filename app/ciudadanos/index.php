@@ -53,7 +53,7 @@ $ciudadanos = $service->GetList();
             </ul>
             <div class="card-body">
               <div class="btn-group">
-                <a href="./operations/edit.php?id=<?= $ciudadano->ID ?>" type="button" class="btn btn-success">Editar</a>
+                <a href="./edit.php?id=<?= $ciudadano->ID ?>" type="button" class="btn btn-success">Editar</a>
                 <button onclick="deleteItem('./delete.php?id=<?= $ciudadano->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
               </div>
             </div>
