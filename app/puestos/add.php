@@ -27,7 +27,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"])) {
   } else {
     echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
   }
-  header("Location: ../index.php");
+  header("Location: ./index.php");
 }
 
 ?>
@@ -40,12 +40,8 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"])) {
       <div class="fw-bold">Formulario de transaccion</div>
       <div class="ms-1">
         <div class="mb-3">
-          <label for="txtId" class="form-label">Id</label>
-          <input type="number" class="form-control" name="Id">
-        </div>
-        <div class="mb-3">
           <label for="txtNombre" class="form-label">Nombre</label>
-          <input type="number" class="form-control" name="Nombre">
+          <input type="text" class="form-control" name="Nombre">
         </div>
         <div class="md-3">
           <label for="txtDescripcion" class="form-label">Descripcion</label>
