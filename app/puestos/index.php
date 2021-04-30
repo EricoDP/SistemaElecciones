@@ -41,7 +41,7 @@ $puestos = $service->GetList();
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><?= $puesto->Descripcion ?></li>
                             <li class="list-group-item">
-                                <?php if ($puesto->Status == true) : ?>
+                                <?php if ($puesto->Estado == "activado") : ?>
                                     <span class="text-success fw-bold">Activo</span>
                                 <?php else : ?>
                                     <span class="text-danger fw-bold">Inactivo</span>
@@ -50,7 +50,7 @@ $puestos = $service->GetList();
                         </ul>
                         <div class="card-body">
                             <div class="btn-group">
-                                <a href="./puestos/edit.php?id=<?= $puesto->ID ?>" type="button" class="btn btn-success">Editar</a>
+                                <a href="./edit.php?id=<?= $puesto->ID ?>" type="button" class="btn btn-success">Editar</a>
                                 <button onclick="deleteItem('./delete.php?id=<?= $puesto->ID ?>')" type="button" class="btn btn-danger">Eliminar</button>
                             </div>
                         </div>
