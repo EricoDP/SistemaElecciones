@@ -54,7 +54,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
 
 <?php topContent() ?>
 
-<?php if ($puesto == null) : ?>
+<?php if ($partido == null) : ?>
   <h3 class="w-100 text-center">No hay registro de esa transacion</h3>
 <?php else : ?>
   <main class="">
