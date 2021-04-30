@@ -15,6 +15,10 @@ require_once '../../models/usuarios.php';
 $utilities = new Utilities();
 $service = new ServiceFile("usuarios");
 
+$usuario = null;
+if (isset($_GET["id"])) {
+  $usuario = $service->GetByID($_GET["id"]);
+}
 
 if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]) && isset($_POST["Estado"]))
 {
@@ -80,13 +84,13 @@ if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido
           <input type="password" class="form-control" name="Password">
         </div>
         <div class="mb-3">
-            <label for="btnradio1" class="form-label">Status</label>
+            <label for="btnradio1" class="form-label">Estado</label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Status" value="Activo" id="btnradio1" autocomplete="off"
-              <?php if($usuario->Status == "Activo"): ?>checked<?php endif; ?>>
+            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
+              <?php if($usuario->Estado == True): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Status" id="btnradio2" value="Inactivo" autocomplete="off"
-              <?php if($usuario->Status == "Inactivo"): ?>checked<?php endif; ?>>
+            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
+              <?php if($usuario->Estado == False): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>
 

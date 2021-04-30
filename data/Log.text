@@ -23,3 +23,5 @@
 =======
 - [29/04/21 09:06PM][Insertar]: {"ID":"608b57f97174e5.43649679","Nombre":"a","Apellido":"a","Email":"a","Usuario":"a","Password":"a","Estado":true} 
 >>>>>>> 0100bbaef0ccb6ccb63867b6efa31544df09b794
+- [29/04/21 09:27PM][Insertar]: {"ID":"608b5d1bbee098.49064913","Nombre":"asdas","Apellido":"dasd","Partido_pertenece":"608b48a7883e91.49420362","Partido_aspira":"608b48a7883e91.49420362","Foto":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png","Estado":true} 
+- [29/04/21 09:29PM][Editar]: Change {null} To {"ID":null,"Nombre":"asdas","Apellido":"dasd","Partido_pertenece":"608b48a7883e91.49420362","Partido_aspira":"608b48a7883e91.49420362","Foto":"img\/","Estado":"Inactivo"} 

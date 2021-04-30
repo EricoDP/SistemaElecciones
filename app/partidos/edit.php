@@ -82,13 +82,13 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
             <input class="form-control" type="file" id="imgLogo" name="Logo">
           </div>
           <div class="mb-3">
-            <label for="btnradio1" class="form-label">Status</label>
+            <label for="btnradio1" class="form-label">Estado</label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Status" value="Activo" id="btnradio1" autocomplete="off"
-              <?php if($partido->Status == "Activo"): ?>checked<?php endif; ?>>
+            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
+              <?php if($partido->Estado == True): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Status" id="btnradio2" value="Inactivo" autocomplete="off"
-              <?php if($partido->Status == "Inactivo"): ?>checked<?php endif; ?>>
+            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
+              <?php if($partido->Estado == False): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>
         </div>
