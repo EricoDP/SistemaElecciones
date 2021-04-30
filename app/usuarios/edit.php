@@ -16,10 +16,10 @@ $utilities = new Utilities();
 $service = new ServiceFile("usuarios");
 
 
-if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]))
-{
-  if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null))
+if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Email"]) && isset($_POST["Usuario"]) && isset($_POST["Password"]))
   {
+    if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Email"] != null) && ($_POST["Usuario"] != null) && ($_POST["Password"] != null))
+    {
     
 
     $usuario = new usuario(
