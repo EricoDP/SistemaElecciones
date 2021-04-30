@@ -25,7 +25,7 @@ if (isset($_GET["id"])) {
   $candidato = $service->GetByID($_GET["id"]);
 }
 
-if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"])) {
+if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]) && isset($_POST["Estado"])) {
   if (($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null)) {
 
     if ($_FILES["Foto"]["name"] != null) {
@@ -45,7 +45,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
       $_POST["Partido_perteneceID"],
       $_POST["Partido_aspiraID"],
       "img/" . $_FILES["Foto"]["name"],
-      True
+      $_POST["Estado"]
     );
 
     $candidato->ID = $_POST["ID"];
@@ -109,6 +109,16 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
           <div class="mb-3">
             <label for="imgFoto" class="form-label">Foto</label>
             <input class="form-control" type="file" id="imgFoto" name="Foto">
+          </div>
+          <div class="mb-3">
+            <label for="btnradio1" class="form-label">Status</label>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="Status" value="Activo" id="btnradio1" autocomplete="off"
+              <?php if($candidato->Status == "Activo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
+            <input type="radio" class="btn-check" name="Status" id="btnradio2" value="Inactivo" autocomplete="off"
+              <?php if($candidato->Status == "Inactivo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>
         </div>
       </div>

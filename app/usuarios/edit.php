@@ -16,7 +16,7 @@ $utilities = new Utilities();
 $service = new ServiceFile("usuarios");
 
 
-if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]))
+if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]) && isset($_POST["Estado"]))
 {
   if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null))
   {
@@ -28,7 +28,7 @@ if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido
       $_POST["Email"],
       $_POST["Usuario"],
       $_POST["Password"],
-      True
+      $_POST["Estado"]
     );
 
     move_uploaded_file($imgname, $imgdestination);
@@ -79,6 +79,16 @@ if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido
           <label for="txtPassword" class="form-label">Password</label>
           <input type="password" class="form-control" name="Password">
         </div>
+        <div class="mb-3">
+            <label for="btnradio1" class="form-label">Status</label>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="Status" value="Activo" id="btnradio1" autocomplete="off"
+              <?php if($usuario->Status == "Activo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
+            <input type="radio" class="btn-check" name="Status" id="btnradio2" value="Inactivo" autocomplete="off"
+              <?php if($usuario->Status == "Inactivo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
+          </div>
 
       <div class="modal-footer">
         <a href="./index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>

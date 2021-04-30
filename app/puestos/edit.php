@@ -21,16 +21,18 @@ if (isset($_GET["id"])) {
 }
 
 if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_POST["Estado"])) {
+  if (($_POST["Nombre"] != null) && ($_POST["Descripcion"] != null)) {
 
-  $puesto = new Puesto(
-    $_POST["Nombre"],
-    $_POST["Descripcion"],
-    True
-  );
+    $puesto = new Puesto(
+      $_POST["Nombre"],
+      $_POST["Descripcion"],
+      $_POST["Estado"]
+    );
 
-  $puesto->ID = $_POST["ID"];
-  $service->Edit($puesto);
-  header("Location: ../index.php");
+    $puesto->ID = $_POST["ID"];
+    $service->Edit($puesto);
+    header("Location: ../index.php");
+  }
 }
 
 ?>
@@ -52,12 +54,22 @@ if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"
           <div class="ms-1">
             <div class="mb-3">
               <label for="txtNombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="Nombre">
+              <input type="text" class="form-control" name="Nombre" value="<?= $puesto->Nombre ?>">
             </div>
           </div>
           <div class="md-3">
             <label for="txtDescripcion" class="form-label">Descripcion</label>
             <textarea class="form-control" name="Descripcion" id="txtDescripcion" rows="3"><?= $puesto->Descripcion ?></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="btnradio1" class="form-label">Status</label>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="Status" value="Activo" id="btnradio1" autocomplete="off"
+              <?php if($puesto->Status == "Activo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
+            <input type="radio" class="btn-check" name="Status" id="btnradio2" value="Inactivo" autocomplete="off"
+              <?php if($puesto->Status == "Inactivo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>
         </div>
         <div class="d-grid gap-2">

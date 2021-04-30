@@ -21,7 +21,7 @@
     $ciudadano = $service->GetByID($_GET["id"]);
   }
 
-  if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Documento"]) && isset($_POST["Email"]))
+  if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Documento"]) && isset($_POST["Email"]) && isset($_POST["Estado"]))
   {
     if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Documento"] != null) && ($_POST["Email"] != null))
     {
@@ -30,7 +30,7 @@
         $_POST["Apellido"],
         $_POST["Documento"],
         $_POST["Email"],
-        True
+        $_POST["Estado"],
       );
 
       $ciudadano->ID = $_POST["ID"];
@@ -80,6 +80,16 @@
             <input type="text" class="form-control" name="Email" value="<?= $ciudadano->Email ?>">
           </div>
         </div>
+        <div class="mb-3">
+            <label for="btnradio1" class="form-label">Status</label>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="Status" value="Activo" id="btnradio1" autocomplete="off"
+              <?php if($ciudadano->Status == "Activo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
+            <input type="radio" class="btn-check" name="Status" id="btnradio2" value="Inactivo" autocomplete="off"
+              <?php if($ciudadano->Status == "Inactivo"): ?>checked<?php endif; ?>>
+            <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
+          </div>
       </div>
     </div>
     <div class="modal-footer">

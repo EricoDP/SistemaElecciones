@@ -99,7 +99,7 @@ require_once '../../models/candidatos.php';
     </div>
     <div class="modal-footer">
       <a href="./index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
-      <button type="submit" class="btn btn-primary">Agregar</button>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
     </div>
   </form>
 </div>

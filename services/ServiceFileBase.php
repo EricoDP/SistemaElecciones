@@ -20,6 +20,10 @@
       return (array)$collection;
     }
 
+    public function GetActive(){
+      $collection = $this->GetList();
+    }
+
     public function GetByID($id){
       $collection = $this->GetList();
       $model = $this->Utilities->SearchProperty($collection, "ID", $id);
