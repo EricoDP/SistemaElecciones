@@ -6,3 +6,4 @@
 - [29/04/21 08:00PM][Insertar]: {"ID":"608b48b275ca78.76833358","Nombre":"Pedro","Apellido":"Nolasco","Partido_pertenece":"608b48a7883e91.49420362","Partido_aspira":"608b48a7883e91.49420362","Foto":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png","Estado":true} 
 - [29/04/21 08:14PM][Editar]: Change {null} To {"ID":null,"Nombre":"Pedro","Apellido":"a","Partido_pertenece":"608b48a7883e91.49420362","Partido_aspira":"608b48a7883e91.49420362","Foto":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png","Estado":true} 
 - [29/04/21 08:16PM][Eliminar]: Delete {"ID":null,"Nombre":"Pedro","Apellido":"a","Partido_pertenece":"608b48a7883e91.49420362","Partido_aspira":"608b48a7883e91.49420362","Foto":"img\/1200px-Logo_del_Partido_de_la_Liberacion_Dominicana.svg.png","Estado":true} 
+- [29/04/21 08:30PM][Insertar]: {"DocIdentidad":null,"Nombre":"j","Apellido":"h","Email":"n","Estado":"n","ID":"608b4f924c2108.72188431"} 
