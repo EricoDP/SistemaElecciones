@@ -23,15 +23,21 @@ if (isset($_GET["id"])) {
 if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_POST["Estado"])) {
   if (($_POST["Nombre"] != null) && ($_POST["Descripcion"] != null)) {
 
+    if($_POST["Estado"] == "True"){
+      $estado = True;
+    }elseif ($_POST["Estado"] == "False") {
+      $estado = false;
+    }
+
     $puesto = new Puesto(
       $_POST["Nombre"],
       $_POST["Descripcion"],
-      $_POST["Estado"]
+      $estado
     );
 
     $puesto->ID = $_POST["ID"];
     $service->Edit($puesto);
-    header("Location: ../index.php");
+    header("Location: ./index.php");
   }
 }
 
@@ -64,10 +70,10 @@ if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"
           <div class="mb-3">
             <label for="btnradio1" class="form-label">Estado</label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" value="True" id="btnradio1" autocomplete="off"
               <?php if($puesto->Estado == True): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="False" autocomplete="off"
               <?php if($puesto->Estado == False): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>

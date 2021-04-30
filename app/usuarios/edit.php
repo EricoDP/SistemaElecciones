@@ -20,11 +20,14 @@ if (isset($_GET["id"])) {
   $usuario = $service->GetByID($_GET["id"]);
 }
 
-if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]) && isset($_POST["Estado"]))
-{
-  if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null))
-  {
-    
+if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]) && isset($_POST["Estado"])) {
+  if (($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null)) {
+
+    if ($_POST["Estado"] == "True") {
+      $estado = True;
+    } elseif ($_POST["Estado"] == "False") {
+      $estado = false;
+    }
 
     $usuario = new usuario(
       $_POST["Nombre"],
@@ -32,14 +35,13 @@ if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido
       $_POST["Email"],
       $_POST["Usuario"],
       $_POST["Password"],
-      $_POST["Estado"]
+      $estado
     );
 
     move_uploaded_file($imgname, $imgdestination);
 
     $service->Add($usuario);
-  }
-  else{
+  } else {
     echo '<script>alert("Debe llenar todos los campos correctamente")</script>';
   }
   header("Location: ./index.php");
@@ -58,48 +60,46 @@ if(isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido
         <div class="fw-bold">Agregar usuario</div>
         <div class="ms-1">
           <div class="mb-3">
-          <div class="container">
-  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
-    <div class="modal-body">
-      <div class="fw-bold">Agregar usuario</div>
-      <div class="ms-1">
-        <div class="mb-3">
-          <label for="txtNombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="Nombre">
-        </div>
-        <div class="mb-3">
-          <label for="txtApellido" class="form-label">Apellido</label>
-          <input type="text" class="form-control" name="Apellido">
-        </div>
-        <div class="mb-3">
-          <label for="txtEmail" class="form-label">Email</label>
-          <input type="text" class="form-control" name="Email">
-        </div>
-        <div class="mb-3">
-          <label for="txtUsuario" class="form-label">Usuario</label>
-          <input type="text" class="form-control" name="Usuario">
-        </div>
-        <div class="mb-3">
-          <label for="txtPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" name="Password">
-        </div>
-        <div class="mb-3">
-            <label for="btnradio1" class="form-label">Estado</label>
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
-              <?php if($usuario->Estado == True): ?>checked<?php endif; ?>>
-            <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
-              <?php if($usuario->Estado == False): ?>checked<?php endif; ?>>
-            <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
-          </div>
+            <div class="container">
+              <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                  <div class="fw-bold">Agregar usuario</div>
+                  <div class="ms-1">
+                    <div class="mb-3">
+                      <label for="txtNombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" name="Nombre">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtApellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" name="Apellido">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtEmail" class="form-label">Email</label>
+                      <input type="text" class="form-control" name="Email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtUsuario" class="form-label">Usuario</label>
+                      <input type="text" class="form-control" name="Usuario">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control" name="Password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="btnradio1" class="form-label">Estado</label>
+                      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="Estado" value="True" id="btnradio1" autocomplete="off" <?php if ($usuario->Estado == True) : ?>checked<?php endif; ?>>
+                        <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
+                        <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="False" autocomplete="off" <?php if ($usuario->Estado == False) : ?>checked<?php endif; ?>>
+                        <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
+                      </div>
 
-      <div class="modal-footer">
-        <a href="./index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
-        <button type="submit" class="btn btn-primary">Editar</button>
-      </div>
-    </form>
-  <?php endif; ?>
-  </div>
+                      <div class="modal-footer">
+                        <a href="./index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                      </div>
+              </form>
+            <?php endif; ?>
+            </div>
 
-  <?php bottomContent() ?>
+            <?php bottomContent() ?>

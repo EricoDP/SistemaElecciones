@@ -20,12 +20,20 @@ if (isset($_GET["id"])) {
   $partido = $service->GetByID($_GET["id"]);
 }
 
-if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Logo"]) && isset($_POST["Estado"])) {
+if (isset($_POST["ID"]) && isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Logo"]) && isset($_POST["Estado"])) {
   if ($_POST["Nombre"] != "" && isset($_POST["Descripcion"]) != null) {
 
-    if ($_FILES["Logo"]["name"] != null) {
-      $target_dir = "../../assets/img/";
-      if (!is_dir($target_dir)) {
+    if($_POST["Estado"] == "True"){
+      $estado = True;
+    }elseif ($_POST["Estado"] == "False") {
+      $estado = false;
+    }
+
+    $img = ($service->GetByID($_POST["ID"]))->Logo;
+    
+    if($_FILES["Logo"]["name"] != null){
+      $target_dir = "../assets/img/";
+      if(!is_dir($target_dir)){
         mkdir($target_dir, 0755);
       }
       $imgname = $_FILES["Logo"]["tmp_name"];
@@ -38,7 +46,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
       $_POST["Nombre"],
       $_POST["Descripcion"],
       "img/" . $_FILES["Logo"]["name"],
-      $_POST["Estado"]
+      $estado
     );
 
     $partido->ID = $_POST["ID"];
@@ -70,7 +78,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
           <div class="ms-1">
             <div class="mb-3">
               <label for="txtNombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="Nombre">
+              <input type="text" class="form-control" name="Nombre" value="<?= $partido->Nombre ?>">
             </div>
           </div>
           <div class="md-3">
@@ -84,10 +92,10 @@ if (isset($_POST["Nombre"]) && isset($_POST["Descripcion"]) && isset($_FILES["Lo
           <div class="mb-3">
             <label for="btnradio1" class="form-label">Estado</label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" value="True" id="btnradio1" autocomplete="off"
               <?php if($partido->Estado == True): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="False" autocomplete="off"
               <?php if($partido->Estado == False): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>

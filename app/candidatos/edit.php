@@ -28,9 +28,17 @@ if (isset($_GET["id"])) {
 if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partido_perteneceID"]) && isset($_POST["Partido_aspiraID"]) && isset($_FILES["Foto"]) && isset($_POST["Estado"])) {
   if (($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Partido_perteneceID"] != null) && ($_POST["Partido_aspiraID"] != null) && ($_FILES["Foto"] != null)) {
 
-    if ($_FILES["Foto"]["name"] != null) {
-      $target_dir = "../../assets/img/";
-      if (!is_dir($target_dir)) {
+    if($_POST["Estado"] == "True"){
+      $estado = True;
+    }elseif ($_POST["Estado"] == "False") {
+      $estado = false;
+    }
+
+    $img = ($service->GetByID($_POST["ID"]))->Foto;
+    
+    if($_FILES["Foto"]["name"] != null){
+      $target_dir = "../assets/img/";
+      if(!is_dir($target_dir)){
         mkdir($target_dir, 0755);
       }
       $imgname = $_FILES["Foto"]["tmp_name"];
@@ -45,7 +53,7 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
       $_POST["Partido_perteneceID"],
       $_POST["Partido_aspiraID"],
       "img/" . $_FILES["Foto"]["name"],
-      $_POST["Estado"]
+      $estado
     );
 
     $candidato->ID = $_POST["ID"];
@@ -113,10 +121,10 @@ if (isset($_POST["Nombre"]) && isset($_POST["Apellido"]) && isset($_POST["Partid
           <div class="mb-3">
             <label for="btnradio1" class="form-label">Estado</label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" value="True" id="btnradio1" autocomplete="off"
               <?php if($candidato->Estado == True): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="False" autocomplete="off"
               <?php if($candidato->Estado == False): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>

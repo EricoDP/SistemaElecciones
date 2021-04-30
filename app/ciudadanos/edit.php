@@ -25,12 +25,18 @@
   {
     if(($_POST["Nombre"] != null) && ($_POST["Apellido"] != null) && ($_POST["Documento"] != null) && ($_POST["Email"] != null))
     {
+      if($_POST["Estado"] == "True"){
+        $estado = True;
+      }elseif ($_POST["Estado"] == "False") {
+        $estado = false;
+      }
+
       $ciudadano = new ciudadano(
         $_POST["Nombre"],
         $_POST["Apellido"],
         $_POST["Documento"],
         $_POST["Email"],
-        $_POST["Estado"],
+        $estado,
       );
 
       $ciudadano->ID = $_POST["ID"];
@@ -52,7 +58,7 @@
     <h3 class="w-100 text-center">No hay registro de esa transacion</h3>
   <?php else : ?>
 <div class="container">
-  <form class="ms-1 border border-rounded" action="./add.php" method="POST" enctype="multipart/form-data">
+  <form class="ms-1 border border-rounded" action="./edit.php" method="POST" enctype="multipart/form-data">
     <div class="modal-body">
     <div class="fw-bold">Editar ciudadano</div>
       <div class="ms-1">
@@ -83,10 +89,10 @@
         <div class="mb-3">
             <label for="btnradio1" class="form-label">Estado</label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="Estado" value="Activo" id="btnradio1" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" value="True" id="btnradio1" autocomplete="off"
               <?php if($ciudadano->Estado == True): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio1">Activo</label>
-            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="Inactivo" autocomplete="off"
+            <input type="radio" class="btn-check" name="Estado" id="btnradio2" value="False" autocomplete="off"
               <?php if($ciudadano->Estado == False): ?>checked<?php endif; ?>>
             <label class="btn btn-outline-primary" for="btnradio2">Inactivo</label>
           </div>
@@ -94,7 +100,7 @@
     </div>
     <div class="modal-footer">
       <a href="./index.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</a>
-      <button type="submit" class="btn btn-primary">Agregar</button>
+      <button type="submit" class="btn btn-primary">Editar</button>
     </div>
   </form>
 </div>
